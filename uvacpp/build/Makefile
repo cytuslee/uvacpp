@@ -111,43 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ALL_CGAL_TARGETS
+# Target rules for targets named main
 
 # Build rule for target.
-ALL_CGAL_TARGETS: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ALL_CGAL_TARGETS
-.PHONY : ALL_CGAL_TARGETS
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-ALL_CGAL_TARGETS/fast:
-	$(MAKE) -f CMakeFiles/ALL_CGAL_TARGETS.dir/build.make CMakeFiles/ALL_CGAL_TARGETS.dir/build
-.PHONY : ALL_CGAL_TARGETS/fast
-
-#=============================================================================
-# Target rules for targets named cgal_check_build_system
-
-# Build rule for target.
-cgal_check_build_system: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cgal_check_build_system
-.PHONY : cgal_check_build_system
-
-# fast build rule for target.
-cgal_check_build_system/fast:
-	$(MAKE) -f CMakeFiles/cgal_check_build_system.dir/build.make CMakeFiles/cgal_check_build_system.dir/build
-.PHONY : cgal_check_build_system/fast
-
-#=============================================================================
-# Target rules for targets named test
-
-# Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
-
-# fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 test.o: test.cpp.o
 
@@ -155,7 +129,7 @@ test.o: test.cpp.o
 
 # target to build an object file
 test.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/test.cpp.o
 .PHONY : test.cpp.o
 
 test.i: test.cpp.i
@@ -164,7 +138,7 @@ test.i: test.cpp.i
 
 # target to preprocess a source file
 test.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/test.cpp.i
 .PHONY : test.cpp.i
 
 test.s: test.cpp.s
@@ -173,7 +147,7 @@ test.s: test.cpp.s
 
 # target to generate assembly for a file
 test.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/test.cpp.s
 .PHONY : test.cpp.s
 
 # Help Target
@@ -184,9 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... ALL_CGAL_TARGETS"
-	@echo "... cgal_check_build_system"
-	@echo "... test"
+	@echo "... main"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

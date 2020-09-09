@@ -27,17 +27,28 @@ if ( NOT Boost_FOUND )
   return()  
 
 endif()
+include_directories(${Boost_INCLUDE_DIRS})
+link_directories(${Boost_LIBRARY_DIRS})
+# GDAL and its components
+
+find_package(GDAL REQUIRED)
+if ( NOT GDAL_FOUND )
+
+  message(STATUS "This project requires the GDAL library, and will not be compiled.")
+
+  return()  
+
+endif()
+include_directories(${GDAL_INCLUDE_DIRS})
 
 # include for local directory
-
 # include for local package
-
-
+include(${CGAL_USE_FILE})
 # Creating entries for all C++ files with "main" routine
 # ##########################################################
+add_executable(main test.cpp)
+target_link_libraries(main ${GDAL_LIBRARY} ${CGAL_LIBS})
 
 
-
-create_single_source_cgal_program( "test.cpp" )
 
 

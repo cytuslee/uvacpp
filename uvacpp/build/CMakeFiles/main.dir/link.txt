@@ -1,0 +1,1 @@
+/usr/bin/clang++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/main.dir/test.cpp.o  -o main -F/Library/Frameworks -framework gdal /usr/local/lib/libmpfr.dylib /usr/local/lib/libgmp.dylib 

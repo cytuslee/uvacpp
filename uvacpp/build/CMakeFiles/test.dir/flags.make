@@ -6,5 +6,5 @@ CXX_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sd
 
 CXX_DEFINES = -DBOOST_ALL_NO_LIB
 
-CXX_INCLUDES = -isystem /usr/local/include -isystem /usr/local/Cellar/cgal/5.0.2_1/include 
+CXX_INCLUDES = -I/Library/Frameworks/GDAL.framework/Headers -isystem /usr/local/include -isystem /usr/local/Cellar/cgal/5.0.2_1/include 
 

@@ -1,7 +1,7 @@
 [
 {
   "directory": "/Users/zongru/Desktop/uvacpp/build",
-  "command": "/usr/bin/clang++  -DBOOST_ALL_NO_LIB -isystem /usr/local/include -isystem /usr/local/Cellar/cgal/5.0.2_1/include  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++14 -o CMakeFiles/test.dir/test.cpp.o -c /Users/zongru/Desktop/uvacpp/test.cpp",
+  "command": "/usr/bin/clang++  -DBOOST_ALL_NO_LIB -I/Library/Frameworks/GDAL.framework/Headers -I/Users/zongru/Desktop/uvacpp/build -isystem /usr/local/include -isystem /usr/local/Cellar/cgal/5.0.2_1/include  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -F/Library/Frameworks  -std=gnu++14 -o CMakeFiles/main.dir/test.cpp.o -c /Users/zongru/Desktop/uvacpp/test.cpp",
   "file": "/Users/zongru/Desktop/uvacpp/test.cpp"
 }
 ]
